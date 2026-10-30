@@ -1,0 +1,93 @@
+{
+  "dataset_info": {
+    "creation_date": "2025-09-17T13:53:14.842455",
+    "total_images": 2188,
+    "species_count": 10,
+    "species_list": [
+      "Balanus_amphitrite",
+      "Perna_viridis",
+      "Amphibalanus_reticulatus",
+      "Hydroides_elegans",
+      "Bugula_neritina",
+      "Ulva_lactuca",
+      "Enteromorpha_intestinalis",
+      "Cliona_celata",
+      "Saccostrea_cucullata",
+      "Sabella_spallanzanii"
+    ],
+    "splits": {
+      "train": {
+        "count": 1530,
+        "ratio": 0.7
+      },
+      "val": {
+        "count": 329,
+        "ratio": 0.15
+      },
+      "test": {
+        "count": 329,
+        "ratio": 0.15
+      }
+    }
+  },
+  "species_distribution": {
+    "Balanus_amphitrite": 267,
+    "Perna_viridis": 300,
+    "Amphibalanus_reticulatus": 210,
+    "Hydroides_elegans": 131,
+    "Bugula_neritina": 200,
+    "Ulva_lactuca": 267,
+    "Enteromorpha_intestinalis": 86,
+    "Cliona_celata": 188,
+    "Saccostrea_cucullata": 287,
+    "Sabella_spallanzanii": 252
+  },
+  "split_distribution": {
+    "train": {
+      "Saccostrea_cucullata": 201,
+      "Enteromorpha_intestinalis": 60,
+      "Perna_viridis": 210,
+      "Ulva_lactuca": 187,
+      "Balanus_amphitrite": 187,
+      "Amphibalanus_reticulatus": 146,
+      "Hydroides_elegans": 91,
+      "Sabella_spallanzanii": 176,
+      "Bugula_neritina": 140,
+      "Cliona_celata": 132
+    },
+    "val": {
+      "Perna_viridis": 45,
+      "Ulva_lactuca": 40,
+      "Cliona_celata": 28,
+      "Sabella_spallanzanii": 38,
+      "Balanus_amphitrite": 40,
+      "Amphibalanus_reticulatus": 32,
+      "Saccostrea_cucullata": 43,
+      "Bugula_neritina": 30,
+      "Hydroides_elegans": 20,
+      "Enteromorpha_intestinalis": 13
+    },
+    "test": {
+      "Balanus_amphitrite": 40,
+      "Ulva_lactuca": 40,
+      "Sabella_spallanzanii": 38,
+      "Bugula_neritina": 30,
+      "Amphibalanus_reticulatus": 32,
+      "Saccostrea_cucullata": 43,
+      "Perna_viridis": 45,
+      "Enteromorpha_intestinalis": 13,
+      "Cliona_celata": 28,
+      "Hydroides_elegans": 20
+    }
+  },
+  "data_sources": [
+    "Bing",
+    "GBIF",
+    "iNaturalist"
+  ],
+  "image_stats": {
+    "avg_coverage": 89.06757769652663,
+    "avg_width": 224.0,
+    "avg_height": 224.0
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "species_to_id": {
+    "Amphibalanus_reticulatus": 0,
+    "Balanus_amphitrite": 1,
+    "Bugula_neritina": 2,
+    "Cliona_celata": 3,
+    "Enteromorpha_intestinalis": 4,
+    "Hydroides_elegans": 5,
+    "Perna_viridis": 6,
+    "Sabella_spallanzanii": 7,
+    "Saccostrea_cucullata": 8,
+    "Ulva_lactuca": 9
+  },
+  "id_to_species": {
+    "0": "Amphibalanus_reticulatus",
+    "1": "Balanus_amphitrite",
+    "2": "Bugula_neritina",
+    "3": "Cliona_celata",
+    "4": "Enteromorpha_intestinalis",
+    "5": "Hydroides_elegans",
+    "6": "Perna_viridis",
+    "7": "Sabella_spallanzanii",
+    "8": "Saccostrea_cucullata",
+    "9": "Ulva_lactuca"
+  },
+  "num_classes": 10
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Test</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        .model-container {
+            width: 600px;
+            height: 400px;
+            border: 2px solid #333;
+            margin: 20px auto;
+            border-radius: 10px;
+            background: white;
+        }
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .info {
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h1>🧪 3D Model Loading Test</h1>
+        <p>Testing GLB model loading from the assets directory</p>
+    </div>
+
+    <div class="model-container">
+        <model-viewer
+            src="/assets/3d species model/Cliona Celata.glb"
+            alt="3D model of Cliona Celata"
+            auto-rotate
+            camera-controls
+            shadow-intensity="1"
+            environment-image="neutral"
+            loading="lazy"
+            reveal="auto"
+            id="model1"
+        >
+            <div class="progress-bar" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+        </model-viewer>
+    </div>
+
+    <div class="info">
+        <p id="status">Loading model...</p>
+        <button onclick="testDifferentModel()">Try Different Model</button>
+    </div>
+
+    <script>
+        const modelViewer = document.getElementById('model1');
+        const statusElement = document.getElementById('status');
+        
+        modelViewer.addEventListener('load', () => {
+            console.log('✅ Model loaded successfully');
+            statusElement.textContent = '✅ Model loaded successfully!';
+        });
+        
+        modelViewer.addEventListener('error', (event) => {
+            console.error('❌ Model failed to load:', event);
+            statusElement.textContent = '❌ Model failed to load. Check console for details.';
+        });
+        
+        modelViewer.addEventListener('progress', (event) => {
+            console.log('📁 Loading progress:', event.detail.totalProgress);
+            statusElement.textContent = `📁 Loading: ${Math.round(event.detail.totalProgress * 100)}%`;
+        });
+        
+        // Test different models
+        const models = [
+            'Cliona Celata.glb',
+            'Balanus Amphitrite.glb',
+            'Bugula Neritina.glb',
+            'Perna Viridis.glb'
+        ];
+        let currentModelIndex = 0;
+        
+        function testDifferentModel() {
+            currentModelIndex = (currentModelIndex + 1) % models.length;
+            const newModel = models[currentModelIndex];
+            modelViewer.src = `/assets/3d species model/${newModel}`;
+            statusElement.textContent = `🔄 Loading ${newModel}...`;
+            console.log(`🔄 Switching to model: ${newModel}`);
+        }
+        
+        // Log available files for debugging
+        console.log('🎨 Testing 3D model loading...');
+        console.log('📁 Expected model path:', modelViewer.src);
+    </script>
+</body>
+</html>
